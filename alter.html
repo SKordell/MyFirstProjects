@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change colour</title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body ondblclick="changeBackground(this)">
+
+		<h1 onclick="showPart2(this)">Another Brick in the Wall</h1>
+
+		<h3 onclick="visibilityOn(this)">Pink Floyd</h3>
+
+		<p onclick="italic(this)" oncopy="copy(this)">We don't need no education<br>
+
+		We don't need no thought control<br>
+
+		No dark sarcasm in the classroom<br>
+
+		Teachers leave them kids alone<br>
+
+		Hey! Teachers! Leave them kids alone<br>
+
+		All in all it's just another brick in the wall<br>
+
+		All in all you're just another brick in the wall</p>
+
+		
+
+		<p id="description" style="visibility: hidden;" onclick="showPicture()">Pink Floyd were an English rock band formed in London.<br>
+
+		They achieved international acclaim with their progressive<br>
+
+		and psychedelic music.</p>
+
+		<img/>
+
+		<script>
+
+			// a JavaScript code here ...
+			function showPart2(x) {
+				x.innerHTML = "Another Brick in the Wall <b>Part 2<b>";
+			}
+			
+			function visibilityOn(x) {
+				document.getElementById("description").style.visibility = "visible";
+			}
+			
+			function italic(x) {
+				x.style.fontStyle = "italic";
+			}
+			
+			function changeBackground(x) {
+				x.style.backgroundColor = "yellow";
+			}
+			
+			function copy(x) {
+				window.alert("Skopiowano tekst");
+			}
+			
+			function showPicture() {
+				document.getElementsByTagName("img")[0].setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/d/d6/Pink_Floyd_-_all_members.jpg");
+			}
+		</script>
+
+	</body>
+
+</html>
