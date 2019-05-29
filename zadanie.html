@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>s200105 Szymon Kordel</title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<h6>Wpisz jakiś tekst:</h6>
+		<input type="text" id="input" onkeypress="getText()"/> 
+		<h6>Długość tekstu:</h6>
+		<input type="text" id="len"/><br>
+		<h6>Tekst od tyłu:</h6>
+		<input type="text" id="reverse"/>
+
+		<script>
+			function getText(){
+
+				var text = document.getElementById("input");
+				document.getElementById("len").defaultValue = text.value.length + 1;
+				
+				var textRev;
+				textRev = document.getElementById("input").value.split("");
+				console.log(textRev);
+				textRev = textRev.reverse();
+				console.log(textRev);
+				textRev = textRev.join("");
+				console.log(textRev);
+				document.getElementById("reverse").defaultValue  = textRev;
+			}
+			
+		</script>
+
+	</body>
+
+</html>

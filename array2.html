@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Create methods</title>
+
+		<meta charset="UTF-8">
+
+	</head>
+
+	<body>
+
+		<h1>Create methods</h1>
+
+		<script>
+
+			var myArray = {
+
+					arr: [3,4,76,1,5,787,33,76,1,99,45,235,53,23],
+
+					min: function(){
+
+						// maximum value (sort the arr and take the last value, use a built-in function)
+						//this.arr.sort();
+						var tab = this.arr;
+						tab.sort();
+						console.log(tab[0]);
+					},		
+
+					max: function(){
+						var tab = this.arr;
+						tab.sort();
+						tab.reverse();
+						console.log(tab[0]);
+					},		// look at the min method comment
+
+					avg: function(){
+						var tab = this.arr;
+						var sum = 0;
+						for(i = 0;i < (tab.length - 1); i++){
+							sum = sum + tab[i];
+						}
+						
+						var avr = sum / tab.length;
+						
+						console.log(avr);
+					},		// avarage value
+
+					lth: function(val){
+						var tab = this.arr;
+						var count = 0;
+						for(i = 0;i < (tab.length - 1); i++){
+							if ( tab[i] < val ){
+								count++;
+							}
+						}
+						console.log(count);
+					}	// the number of arr values less than 'val'
+
+			};
+
+			myArray.min();
+			myArray.max();
+			myArray.avg();
+			myArray.lth(window.prompt("Please enter the number"));
+			// display results (min,max,avg,lth) in the console
+
+			// ...
+
+		</script>
+
+	</body>
+
+</html>
